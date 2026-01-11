@@ -23,8 +23,10 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
       notFound: true,
     };
   }
+
   return {
     props: { book },
+    revalidate: 3,
   };
 };
 
